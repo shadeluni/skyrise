@@ -1,0 +1,52 @@
+@import '../../Styles/variables';
+
+.register{
+    @include flex_center($jc: space-between);
+    margin: 6rem 2rem;
+    text-align: left;
+
+    &__col{
+        width: 50%;
+        height: 100%;
+        
+        #nombre_empresa{
+            margin-top: 25px;
+        }
+
+        .btn__register{
+            background-color: $purple;
+            color: $white;
+            border-radius: 15px;
+            width: 140px;
+            border: none;
+            outline: none;
+
+            &:hover{
+                background-color: $blue;
+            }
+        }
+        
+        img{
+            width: 100%;
+            // object-fit: cover;
+            // height: 100%;
+        }
+        h1{
+          font-weight: 400;
+          color: $font;  
+        }
+
+        &--inputs{
+            margin: 3rem 0;
+         input {
+            margin-bottom: 25px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid $shadow;
+            transition: margin-top 15s ease-in;
+         }
+
+        }
+    }
+}

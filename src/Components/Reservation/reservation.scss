@@ -1,0 +1,145 @@
+@import '../../Styles/variables';
+
+.reservation{
+    margin: 1.5rem 2rem 0rem 2rem;
+    padding: 10rem 2rem;
+    // @include flex_center();
+    // flex-direction: column;
+    
+    h1{
+        font-size: 4rem;
+        text-transform: uppercase;
+
+    }
+
+    &__buttons{
+        @include flex_center($jc: space-between);
+        margin-top: 2rem;
+        height: 5rem;
+        // gap: 15rem;
+
+        &--group{
+            @include flex_center();
+            width: 30%;
+            height: 70%;
+            background-color: rgba(162, 174, 242, .2);
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+
+            &:nth-child(2){
+                width: 55%;
+            }
+
+            .purple{
+                border-radius: 50%;
+                background-color: $purple;
+                outline: none;
+                border: none;
+                width: 13%;
+                height: 80%;
+                color: $white;
+                font-size: 1.4rem;
+                margin-right: 10px;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    background-color: $blue;
+                    border-right: none;
+                    box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                    -webkit-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                    -moz-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                    border-radius: 15px;
+                }
+
+                &.search{
+                    font-size: 1rem;
+                    width: 55%;
+                    border-bottom-left-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    &:hover{
+                        box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        -webkit-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        -moz-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        border-radius: 15px;
+                    }
+                }
+            }
+            input{
+                display: block;
+                text-indent: 15%;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                font-weight: 500;
+                width: 60%;
+                &::placeholder{
+                    color: $font;
+
+                }
+            }
+
+            input[type="date"] {
+                width: 80%;
+                margin-left: .8rem;
+                display: block;
+                text-indent: 3%;
+              }
+
+            input[type="date"]:before {
+                content: attr(placeholder) !important;
+                // margin-right: 0.1em;
+              }
+              input[type="date"]:focus:before,
+              input[type="date"]:valid:before {
+                content: "";
+              }
+
+            .group--btn{
+                @include flex_center();
+                position: relative;
+                height: 100%;
+                width: 45%;
+                border: none;
+                outline: none;
+                margin-right: 3px;
+                
+                .guest{
+                    width: 80%;
+                }
+
+                .icon{
+                    position: absolute;
+                    top: 33%;
+                    left: 20px;
+                    color: $blue;
+                    margin-right: 10px;
+                    @include flex_center();
+                }
+
+                &:first-child{
+                    border-top-left-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                }
+                transition: all .2s ease-in;
+                    &:hover{
+                        border-right: none;
+                        // box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.49);
+                        // -webkit-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.49);
+                        // -moz-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.49);
+                        box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        -webkit-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        -moz-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        border-radius: 15px;
+                    }
+            }
+        }
+    }
+    .destinations{
+        @include flex_center($jc: space-between);
+        
+    }
+}

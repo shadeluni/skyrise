@@ -1,0 +1,127 @@
+// incluir modulos
+@import '../../Styles/variables';
+
+.home{
+    position: relative;
+    @include flex_center($jc: space-between);
+    flex-direction: column;
+    box-shadow: 0px 14px 5px 0px rgba(162,174,242,0.51);
+    -webkit-box-shadow: 0px 14px 5px 0px rgba(162,174,242,0.51);
+    -moz-box-shadow: 0px 14px 5px 0px rgba(162,174,242,0.51);
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+
+    .nav{
+        @include flex_center($jc: space-around);
+        width: 100%;
+        height: 6rem;
+        text-transform: uppercase;
+
+        h5{
+            color: $purple;
+        }
+        &__menu{
+            @include flex_center($jc:space-between);
+           gap: .3rem;
+           font-weight: 500;
+           height: 70%;
+            span{
+                font-size: 1rem;
+                margin-top: 2px;
+            }
+           text-align: center;
+           &--btn{
+            background-color: $purple;
+            outline: none;
+            border: none;
+            width: 8rem;
+            font-size: small;
+            border-radius: 15px;
+            text-transform: uppercase;
+            
+            &:hover{
+                background-color: $blue;
+            }
+           }
+        }
+    }
+
+    .hero{
+
+        h1{
+            font-size: 15rem;
+            text-transform: uppercase;
+            color: $purple;
+            text-shadow: $shadow 5px 2px 10px;
+            letter-spacing: 5px;
+        }
+        &__text{
+            @include flex_center($jc: space-around);
+            text-transform: uppercase;
+            text-align: right;
+
+            &--left{
+             text-align: left;   
+            }
+
+            h5{
+                font-weight: 400;
+                color: $font;
+                opacity: 45%;
+            }
+            
+        }
+        flex-direction: column;
+        // background-color: yellow;
+        width: 100%;
+        margin-bottom: 5rem;
+
+        &__image{
+            width: 75%;
+            // height: 50%;
+            // height: 200;
+            // object-fit: contain;
+            // img{
+            //     object-fit: cover;
+            //     width: 100%;
+            // }
+        }
+        &__socials{
+            @include flex_center($jc: right, $ai: flex-end);
+            width: 87%;
+            gap: 15px;
+
+            &--icon{
+                color: $logos;
+                background-color: $shadow;
+                opacity: 40%;
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                font-size: 1rem;
+                padding: .5rem .8rem;
+                &:hover{
+                    background-color: $logos;
+                }
+            }
+        }
+    }
+    
+    .scroll_button{
+        position: absolute;
+        bottom: -5%;
+        background-color: $purple;
+        border:none;
+        outline: none;
+        color: $white;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        width: 8%;
+        height: 6rem;
+        transition: background-color 0.5s ease-in-out, border 0.8s;
+        &:hover{
+            border: 10px solid $shadow;
+            background-color:$read;
+        }
+    }
+}

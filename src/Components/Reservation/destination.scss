@@ -1,0 +1,44 @@
+@import '../../Styles/variables';
+
+.destination__card{
+    margin-top: 5rem;
+    border-radius: 15px;
+    border: none;
+    text-align: left;
+
+    img{
+        border-radius: 15px;
+    }
+
+    &--class{
+        position: relative;
+        
+        .class{
+            position: absolute;
+            left: 5%;
+            top: 3%;
+            background-color: rgba(255, 255, 255, 0.5); 
+            border-radius: 15px;
+            color: $white;
+            width: 80%;
+            height: 2rem;
+            @include flex_center($jc: left);
+            
+            h5{
+                font-size: 15px;
+                text-align: left;
+                margin: 10px 0 10px 10px;
+            }
+        }
+    }
+    h5{
+        font-size: 1.5rem;
+    }
+    .description{
+        font-weight: 200;
+        font-size: .8rem;
+    }
+    .price{
+        color: $read;
+    }
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&family=Roboto:wght@300;400;500&display=swap');
+
+//variables
+$blue: #1A37D9; //#3854F2
+$btn_reserva:#F2F2F2; // botones reserva o #F6F6F6
+$font: #0D0D0D;
+$purple: #4757EA;
+$shadow: #A2AEF2;
+$read:#4757EA;
+$logos: #222222;
+$white: #FEFEFE;
+$shadow_text:#13162C;
+
+// funciones
+@mixin flex_center($jc: center, $ai: center){
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+}

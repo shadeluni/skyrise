@@ -1,0 +1,115 @@
+@import '../../Styles/variables';
+
+.login{
+    margin: 5rem 4rem;
+
+    &__section{
+        box-shadow: 0px 14px 5px 0px rgba(162,174,242,0.51);
+    -webkit-box-shadow: 0px 14px 5px 0px rgba(162,174,242,0.51);
+    -moz-box-shadow: 0px 14px 5px 0px rgba(162,174,242,0.51);
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+    padding: 3rem;
+    }
+
+    &__img{
+        margin-top: 2rem;
+        width: 100%;
+        margin-bottom: 4rem;
+        img{
+            width: 100%;
+        }
+    }
+
+    &__info{
+        @include flex_center($jc: flex-end);
+        font-weight: 500;
+        // gap: 5px;
+        
+
+        color: $font;
+        input{
+            background-color: rgba(162, 174, 242, .2);
+            border: none;
+            outline: none;
+            
+            
+        }
+        &--inp{
+            
+            &:first-child{
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+
+            }
+            &:nth-child(2){
+                border-left: 1px solid  rgba(162, 174, 242, .4);;
+            }
+
+            transition: all .2s ease-in;
+                    &:hover{
+                        border-right: none;
+                        box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        -webkit-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                        -moz-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                    }
+        }
+    }
+    h2{
+        font-weight: 600;
+        color: $font;
+        margin-top: 5rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    &__buscar{
+        @include flex_center($jc:flex-end);
+        // flex-direction: column;
+        gap: 45px;
+        font-weight: 500;
+        color: $font;
+        margin-top: 5rem;
+        
+
+        input{
+            background-color: rgba(162, 174, 242, .2);
+        }
+        .search{
+            border-radius: 50%;
+            background-color: $purple;
+            outline: none;
+            border: none;
+            width: 10%;
+            height: 35px;
+            color: $white;
+            margin-right: 10px;
+            transition: all 0.2s ease-in-out;
+            font-size: 1rem;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            &:hover{
+                box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                -webkit-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+                -moz-box-shadow: 10px 2px 5px -4px rgba(26,55,217,0.67);
+            }
+        }
+    }
+
+    &__vuelo{
+        box-shadow: 0px -8px 9px 5px rgba(162,174,242,0.75);
+        -webkit-box-shadow: 0px -8px 9px 5px rgba(162,174,242,0.75);
+        -moz-box-shadow: 0px -8px 9px 5px rgba(162,174,242,0.75);
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        padding: 3rem;
+        @include flex_center($jc: space-around);
+
+    }
+
+    .millas{
+        margin-right: 5px;
+    }
+}
